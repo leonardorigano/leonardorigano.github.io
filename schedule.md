@@ -1,11 +1,11 @@
-# Movie 1
-Weekday: Monday
-Description: An exciting space adventure.
-Genre: Sci-Fi
-Director: Christopher Nolan
-Release Date: 2014
-Language: English
-Subtitles: German
-Length: 169 minutes
-Trailer: https://www.youtube.com/watch?v=example1
-
+# Film 1
+- **Weekday:** Montag
+- **Description:** Dies ist die Beschreibung des Films.
+- **Genre:** Drama
+- **Director:** Max Mustermann
+- **Release Date:** 2022
+- **Language:** Englisch
+- **Subtitles:** Deutsch
+- **Length:** 120 Minuten
+- **Trailer:** https://trailer-link.com
+- **Image:** https://image-url-von-letterboxd.com/film1-poster.jpg
