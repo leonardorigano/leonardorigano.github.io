@@ -1,0 +1,48 @@
+- day: Monday
+  movie:
+    title: The Shawshank Redemption
+    description: Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.
+    length: 2h 22min
+    trailer: https://www.youtube.com/watch?v=6hB3S9bIaco
+
+- day: Tuesday
+  movie:
+    title: The Godfather
+    description: The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.
+    length: 2h 55min
+    trailer: https://www.youtube.com/watch?v=sY1S34973zA
+
+- day: Wednesday
+  movie:
+    title: The Dark Knight
+    description: When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.
+    length: 2h 32min
+    trailer: https://www.youtube.com/watch?v=EXeTwQWrcwY
+
+- day: Thursday
+  movie:
+    title: 12 Angry Men
+    description: A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.
+    length: 1h 36min
+    trailer: https://www.youtube.com/watch?v=_13J_9B5jEk
+
+- day: Friday
+  movie:
+    title: Schindler's List
+    description: In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.
+    length: 3h 15min
+    trailer: https://www.youtube.com/watch?v=gG22XNhtnoY
+
+- day: Saturday
+  movie:
+    title: Pulp Fiction
+    description: The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.
+    length: 2h 34min
+    trailer: https://www.youtube.com/watch?v=s7EdQ4FqbhY
+
+- day: Sunday
+  movie:
+    title: The Lord of the Rings: The Return of the King
+    description: Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.
+    length: 3h 21min
+    trailer: https://www.youtube.com/watch?v=r5X-hFf6Bwo
