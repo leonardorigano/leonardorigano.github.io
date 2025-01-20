@@ -26,6 +26,55 @@ header p {
   margin: 0.5rem 0 0;
 }
 
+#submit-movie {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#submit-movie h2 {
+  font-family: 'Cinzel', serif;
+  color: #ffd700;
+}
+
+#submit-movie form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+#submit-movie input,
+#submit-movie textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#submit-movie button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#submit-movie button:hover {
+  background: #d40813;
+}
+
+#submit-movie textarea {
+  height: 100px;
+}
+
 /* Main Content */
 main {
   max-width: 900px;
