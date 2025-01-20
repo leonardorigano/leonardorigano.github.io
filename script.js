@@ -37,6 +37,28 @@ function parseMarkdown(markdown) {
   return schedule;
 }
 
+document.querySelector('#submit-movie form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      Accept: 'application/json',
+    },
+  });
+
+  if (response.ok) {
+    document.getElementById('success-message').style.display = 'block';
+    form.reset();
+  } else {
+    alert('Es gab ein Problem beim Einreichen deines Wunschfilms.');
+  }
+});
+
 function renderSchedule(schedule) {
   Object.entries(schedule).forEach(([weekday, movies]) => {
     const daySection = document.getElementById(weekday);
