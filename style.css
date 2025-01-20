@@ -102,13 +102,13 @@ main {
     background: #fff; /* White background for movie cards */
     border-radius: 8px;
     padding: 1rem;
-    display: flex; /* Flexbox for image and text alignment */
-    align-items: center; /* Center align items vertically */
+ 
 }
 
 .movie img {
     max-width: 150px; /* Fixed size for images */
     margin-right: 20px; /* Space between image and text */
+    margin-top: 20px; /* Space between image and text */
     border-radius: 4px; /* Slightly rounded corners for images */
 }
 
