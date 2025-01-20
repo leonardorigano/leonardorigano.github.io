@@ -1,162 +1,172 @@
 /* General Reset and Fonts */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #121212;
-  color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Non-serif font */
+    background-color: #f9f9f9; /* Light background for a clean look */
+    color: #333; /* Dark text for good contrast */
 }
 
 /* Header Styling */
 header {
-  text-align: center;
-  background: linear-gradient(90deg, #e50914, #b20710);
-  color: #fff;
-  padding: 1.5rem 0;
+    text-align: center;
+    background: linear-gradient(90deg, #cc0000, #b20710); /* Mild red gradient */
+    color: #fff;
+    padding: 2rem 0;
 }
 
 header h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
-  margin: 0;
+    font-size: 2.5rem;
+    margin: 0;
 }
 
 header p {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0;
 }
 
+/* Submit Movie Section */
 #submit-movie {
-  background: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-top: 2rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  text-align: center;
+    background: #fff; /* White background for submission section */
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: none; /* No drop shadow for a clean look */
 }
 
 #submit-movie h2 {
-  font-family: 'Cinzel', serif;
-  color: #ffd700;
+    color: #cc0000; /* Mild red accent color */
 }
 
 #submit-movie form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
 }
 
 #submit-movie input,
 #submit-movie textarea {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 #submit-movie button {
-  background: #e50914;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
+    background: #cc0000; /* Mild red accent color */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 #submit-movie button:hover {
-  background: #d40813;
+    background: #b30000; /* Darker red on hover */
 }
 
 #submit-movie textarea {
-  height: 100px;
+    height: 100px;
 }
 
 /* Main Content */
 main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 /* Day Section */
 .day {
-  margin-bottom: 2rem;
-  background-color: #1e1e1e;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    background-color: #fff; /* White background for day sections */
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: none; /* No drop shadow for a clean look */
 }
 
 .day h2 {
-  margin-top: 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e50914;
-  font-family: 'Cinzel', serif;
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #cc0000; /* Mild red accent color */
 }
 
 /* Movie Cards */
 .movie {
-  margin: 1.5rem 0;
-  background: #2b2b2b;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    margin: 1.5rem 0;
+    background: #fff; /* White background for movie cards */
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex; /* Flexbox for image and text alignment */
+    align-items: center; /* Center align items vertically */
+}
+
+.movie img {
+    max-width: 150px; /* Fixed size for images */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 4px; /* Slightly rounded corners for images */
 }
 
 .movie h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #ffd700;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #cc0000; /* Mild red accent color */
 }
 
 .movie p {
-  margin: 0.3rem 0;
+    margin: 0.3rem 0;
 }
 
 .movie a {
-  text-decoration: none;
-  color: #e50914;
-  font-weight: bold;
-  transition: color 0.3s;
+    text-decoration: none;
+    color: #cc0000; /* Mild red accent color for links */
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .movie a:hover {
-  color: #ffd700;
+    color: #b30000; /* Darker red on hover */
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: #888;
-  margin-top: 2rem;
-  font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #888;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }
 
 footer p {
-  margin: 0;
+    margin: 0;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
+    header h1 {
+        font-size: 2rem;
+    }
 
-  header p {
-    font-size: 1rem;
-  }
+    header p {
+        font-size: 1rem;
+    }
 
-  .movie {
-    font-size: 0.9rem;
-  }
+    .movie {
+        flex-direction: column; /* Stack image above text on small screens */
+        align-items: flex-start; /* Align text to the start */
+    }
 
-  .movie h3 {
-    font-size: 1.2rem;
-  }
+    .movie img {
+        margin: 0 0 10px 0; /* Adjust margin for stacked layout */
+    }
+
+    .movie h3 {
+        font-size: 1.2rem;
+    }
 }
