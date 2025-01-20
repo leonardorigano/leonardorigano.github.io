@@ -163,7 +163,7 @@ footer p {
     }
 
     .movie img {
-        margin: 0 0 10px 0; /* Adjust margin for stacked layout */
+        margin: 20px 0 10px 0; /* Adjust margin for stacked layout */
     }
 
     .movie h3 {
