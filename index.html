@@ -12,16 +12,7 @@
     <h1>🎬 Außenstelle Kino 🎥</h1>
     <p>Feinste Streifen, halbe Qualität! 🍿</p>
   </header>
-<section id="submit-movie">
-  <h2>Wunschfilm einreichen</h2>
-  <form action="https://formspree.io/f/xnqwzvdq" method="POST">
-    <input type="text" name="movie" placeholder="Deinen Wunschfilm hier eintragen" required />
-    <input type="email" name="email" placeholder="Deine E-Mail (optional)" />
-    <textarea name="message" placeholder="Weitere Informationen oder Gründe (optional)"></textarea>
-    <button type="submit">Einreichen</button>
-  </form>
-  <p id="success-message" style="display: none; color: #28a745;">Vielen Dank! Dein Wunschfilm wurde eingereicht. 🎬</p>
-</section>
+
   
   <main id="schedule">
     <section id="Monday" class="day">
@@ -53,6 +44,15 @@
       <div class="movies"></div>
     </section>
   </main>
+  <section id="submit-movie">
+  <h2>Wunschfilm einreichen</h2>
+  <form action="https://formspree.io/f/xnqwzvdq" method="POST">
+    <input type="text" name="movie" placeholder="Deinen Wunschfilm hier eintragen" required />
+
+    <button type="submit">Einreichen</button>
+  </form>
+  <p id="success-message" style="display: none; color: #28a745;">Vielen Dank! Dein Wunschfilm wurde eingereicht. 🎬</p>
+</section>
   <footer>
     <p>&copy; 2025 Außenstelle Kino</p>
   </footer>
