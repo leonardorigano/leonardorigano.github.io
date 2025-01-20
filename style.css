@@ -1,4 +1,4 @@
-/* Fonts and Basic Reset */
+/* General Reset and Fonts */
 body {
   margin: 0;
   padding: 0;
@@ -7,12 +7,12 @@ body {
   color: #f4f4f4;
 }
 
+/* Header Styling */
 header {
   text-align: center;
   background: linear-gradient(90deg, #e50914, #b20710);
   color: #fff;
   padding: 1.5rem 0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
@@ -22,16 +22,18 @@ header h1 {
 }
 
 header p {
+  font-size: 1.1rem;
   margin: 0.5rem 0 0;
-  font-size: 1rem;
 }
 
+/* Main Content */
 main {
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+/* Day Section */
 .day {
   margin-bottom: 2rem;
   background-color: #1e1e1e;
@@ -47,16 +49,18 @@ main {
   font-family: 'Cinzel', serif;
 }
 
+/* Movie Cards */
 .movie {
-  margin: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: 1.5rem 0;
+  background: #2b2b2b;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .movie h3 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #ffd700;
 }
 
@@ -75,6 +79,7 @@ main {
   color: #ffd700;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -86,4 +91,23 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .movie {
+    font-size: 0.9rem;
+  }
+
+  .movie h3 {
+    font-size: 1.2rem;
+  }
 }
