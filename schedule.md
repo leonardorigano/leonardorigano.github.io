@@ -8,4 +8,4 @@
 - **Subtitles:** Deutsch
 - **Length:** 120 Minuten
 - **Trailer:** https://trailer-link.com
-- **Image:** https://image-url-von-letterboxd.com/film1-poster.jpg
+- **Image:** https://letterboxd.com/film/back-in-action-2025/
