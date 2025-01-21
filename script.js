@@ -8,7 +8,36 @@ async function loadSchedule() {
     document.getElementById('schedule').innerHTML = '<p>Failed to load schedule.</p>';
   }
 }
+async function fetchMovieDetails(tmdbId) {
+    const apiKey = 'YOUR_TMDB_API_KEY';
+    const url = `https://api.themoviedb.org/3/movie/${tmdbId}?api_key=${apiKey}`;
+    const response = await fetch(url);
+    return response.ok ? await response.json() : null;
+}
 
+async function loadSchedule() {
+    const response = await fetch('schedule.md');
+    const markdown = await response.text();
+    const schedule = parseMarkdown(markdown);
+
+    for (const day in schedule) {
+        for (const movie of schedule[day]) {
+            if (movie.tmdbid) {
+                const details = await fetchMovieDetails(movie.tmdbid);
+                if (details) {
+                    movie.title = details.title;
+                    movie.description = details.overview;
+                    movie.genre = details.genres.map((g) => g.name).join(', ');
+                    movie.release_date = details.release_date;
+                    movie.length = `${details.runtime} minutes`;
+                    movie.image = `https://image.tmdb.org/t/p/w500${details.poster_path}`;
+                }
+            }
+        }
+    }
+
+    renderSchedule(schedule);
+}
 function parseMarkdown(markdown) {
   const lines = markdown.split('\n');
   const schedule = {};
