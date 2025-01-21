@@ -74,69 +74,48 @@ async function fetchMovieDetails(tmdbId) {
 }
 
 function renderSchedule(schedule) {
-  const scheduleContainer = document.getElementById("schedule");
-  scheduleContainer.innerHTML = "";
+  const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  const scheduleContainer = document.getElementById('schedule');
+  scheduleContainer.innerHTML = ''; // Clear previous content
 
-  Object.entries(schedule).forEach(([weekday, movies]) => {
-    const daySection = document.createElement("section");
-    daySection.className = "day";
+  weekdays.forEach((weekday) => {
+    const daySection = document.createElement('section');
+    daySection.classList.add('day');
     daySection.id = weekday;
 
-    const heading = document.createElement("h2");
-    heading.textContent = weekday;
-    daySection.appendChild(heading);
+    const dayTitle = document.createElement('h2');
+    dayTitle.textContent = weekday;
+    daySection.appendChild(dayTitle);
 
-    const moviesContainer = document.createElement("div");
-    moviesContainer.className = "movies";
+    const moviesContainer = document.createElement('div');
+    moviesContainer.classList.add('movies');
 
-    movies.forEach((movie) => {
-      const movieCard = document.createElement("div");
-      movieCard.className = "movie";
+    if (schedule[weekday] && schedule[weekday].length > 0) {
+      // Render movies for this weekday
+      schedule[weekday].forEach((movie) => {
+        const movieCard = document.createElement('div');
+        movieCard.classList.add('movie');
 
-      const movieTitle = document.createElement("h3");
-      movieTitle.textContent = movie.title || "Unknown Title";
-      movieCard.appendChild(movieTitle);
-
-      if (movie.image) {
-        const movieImage = document.createElement("img");
-        movieImage.src = movie.image;
-        movieImage.alt = `${movie.title} poster`;
-        movieImage.className = "movie-poster";
-        movieCard.appendChild(movieImage);
-      }
-
-      if (movie.description) {
-        const movieDescription = document.createElement("p");
-        movieDescription.innerHTML = `<strong>Description:</strong> ${movie.description}`;
-        movieCard.appendChild(movieDescription);
-      }
-
-      if (movie.genre) {
-        const movieGenre = document.createElement("p");
-        movieGenre.innerHTML = `<strong>Genre:</strong> ${movie.genre}`;
-        movieCard.appendChild(movieGenre);
-      }
-
-      if (movie.release_date) {
-        const movieReleaseDate = document.createElement("p");
-        movieReleaseDate.innerHTML = `<strong>Release Date:</strong> ${movie.release_date}`;
-        movieCard.appendChild(movieReleaseDate);
-      }
-
-      if (movie.language) {
-        const movieLanguage = document.createElement("p");
-        movieLanguage.innerHTML = `<strong>Language:</strong> ${movie.language}`;
-        movieCard.appendChild(movieLanguage);
-      }
-
-      if (movie.length) {
-        const movieLength = document.createElement("p");
-        movieLength.innerHTML = `<strong>Length:</strong> ${movie.length}`;
-        movieCard.appendChild(movieLength);
-      }
-
-      moviesContainer.appendChild(movieCard);
-    });
+        movieCard.innerHTML = `
+          <img src="${movie.image}" alt="${movie.title}" class="movie-poster">
+          <h3>${movie.title}</h3>
+          <p><strong>Description:</strong> ${movie.description}</p>
+          <p><strong>Genre:</strong> ${movie.genre}</p>
+          <p><strong>Director:</strong> ${movie.director}</p>
+          <p><strong>Release Date:</strong> ${movie.release_date}</p>
+          <p><strong>Language:</strong> ${movie.language} (${movie.subtitles})</p>
+          <p><strong>Length:</strong> ${movie.length}</p>
+          <p><a href="${movie.trailer}" target="_blank">Watch Trailer</a></p>
+        `;
+        moviesContainer.appendChild(movieCard);
+      });
+    } else {
+      // No movies for this weekday
+      const noMovies = document.createElement('p');
+      noMovies.textContent = "No movies scheduled.";
+      noMovies.classList.add('no-movies');
+      moviesContainer.appendChild(noMovies);
+    }
 
     daySection.appendChild(moviesContainer);
     scheduleContainer.appendChild(daySection);
