@@ -60,7 +60,7 @@ function parseMarkdown(markdown) {
 }
 
 async function fetchMovieDetails(tmdbId) {
-  const apiKey = "YOUR_TMDB_API_KEY"; // Replace with your actual TMDb API key
+  const apiKey = "461d2fea677606dba09d967afd874b31"; // Replace with your actual TMDb API key
   const url = `https://api.themoviedb.org/3/movie/${tmdbId}?api_key=${apiKey}`;
 
   try {
